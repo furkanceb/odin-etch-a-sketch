@@ -1,0 +1,13 @@
+.body{
+    display: flex;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.divInsideGrid:hover{
+    background-color: black;
+}
