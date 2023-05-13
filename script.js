@@ -1,9 +1,9 @@
 const container=document.querySelector(".container");
 
-for(let j=0;j<16;j++){
+for(let j=0;j<64;j++){
     const divGrid = document.createElement("div");
     container.appendChild(divGrid);
-    for(let i=0;i<16;i++){
+    for(let i=0;i<64;i++){
         const divGridInside = document.createElement("div");
         divGridInside.classList.add("divGridInside")
         divGrid.appendChild(divGridInside);
@@ -11,20 +11,16 @@ for(let j=0;j<16;j++){
     }
 
 let penColor="black";
-
+let currentTool=document.querySelector(".pen");
+currentTool.classList.add("active-tool");
+console.log(currentTool.classList);
 const grid = document.querySelectorAll(".divGridInside");
-
+console.log(currentTool);
 
 grid.forEach(element =>{
-  element.addEventListener("mouseover",startDrawing);
+  element.addEventListener("mouseover",draw);
   element.addEventListener("mousedown",draw);
  });
-
- function startDrawing(event){
-  draw(event);
-
-
- }
 
  function draw(event){
   if (event.buttons === 1){
@@ -32,4 +28,24 @@ grid.forEach(element =>{
   }
 
  }
+ 
+ const toolObjects=document.querySelectorAll(".tool-object");
+
+ toolObjects.forEach(toolObject =>{
+  toolObject.addEventListener("click",chooseTool);
+ });
+
+ function chooseTool(event){
+  currentTool.classList.remove("active-tool");
+  currentTool=event.target;
+  currentTool.classList.add("active-tool");
+  console.log(currentTool);
+  
+}
+
+ 
+
+
+
+ 
  
