@@ -37,7 +37,7 @@ grid.forEach(element =>{
 
  function chooseTool(event){
   currentTool.classList.remove("active-tool");
-  currentTool=event.target;
+  currentTool=event.currentTarget;
   currentTool.classList.add("active-tool");
   console.log(currentTool);
   
