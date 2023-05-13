@@ -18,8 +18,8 @@ header{
     font-family: 'Roboto',sans-serif;
     color:white;
     background-image: linear-gradient(to right,rgb(94, 26, 158),blueviolet,blue,darkblue);
-    height: 150px;
-   border-bottom: 4px solid rgb(197, 197, 197);
+    padding: 0px 0;
+    border-bottom: 4px solid rgb(197, 197, 197);
 }
 
 .main-header{
@@ -31,7 +31,7 @@ header{
     display: flex;
     gap: 2em;
 }
-h2,h3{
+h3{
     padding: 0;
     margin: 0;
 }
@@ -91,4 +91,22 @@ h2,h3{
     margin: 0px;
   }
 
- 
+ .colors:hover, .pen:hover, .eraser:hover, .fill:hover, .color-picker:hover{
+    opacity: 0.2;
+    transition: 0.5s;
+ }
+
+ a{
+    text-decoration: none;
+    color:white;
+    font-size: larger;
+ }
+
+ .blueprint-image{
+    position: absolute;
+    opacity: 0.3;
+ }
+
+.active-tool{
+    background-color: red;
+}
