@@ -108,5 +108,8 @@ h3{
  }
 
 .active-tool{
-    background-color: red;
+    background-color: rgb(76, 29, 73);
+    border-radius: 2em;
+    width: 80px;
+    opacity: 0.5;
 }
